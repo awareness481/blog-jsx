@@ -10,6 +10,7 @@ import CustomLink from '../../components/CustomLink'
 import Layout from '../../components/Layout'
 import { postFilePaths, POSTS_PATH } from '../../utils/mdxUtils'
 import { GetStaticPaths, GetStaticProps } from 'next'
+import remarkShikiTwoslash from 'remark-shiki-twoslash'
 
 // Custom components/renderers to pass to MDX.
 // Since the MDX files aren't loaded by webpack, they have no knowledge of how
@@ -79,7 +80,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
   const mdxSource = await serialize(content, {
     // Optionally pass remark/rehype plugins
     mdxOptions: {
-      remarkPlugins: [],
+      remarkPlugins: [[remarkShikiTwoslash, { theme: "dark-plus" }]],
       rehypePlugins: [],
     },
     scope: data,
