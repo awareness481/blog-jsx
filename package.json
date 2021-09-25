@@ -5,12 +5,12 @@
     "cypress:headless": "cypress run",
     "e2e": "npm run build && start-server-and-test start http://localhost:3000 cypress",
     "e2e:headless": "npm run build && start-server-and-test start http://localhost:3000 cypress:headless",
+    "jest": "jest --watch",
     "dev": "next",
     "dev:watch": "next-remote-watch ./posts",
     "lint": "next lint",
     "build": "next build",
-    "start": "next start",
-    "test": "jest --watch"
+    "start": "next start"
   },
   "dependencies": {
     "gray-matter": "^4.0.2",
@@ -30,6 +30,7 @@
     "cypress": "^8.4.1",
     "eslint": "7.32.0",
     "eslint-config-next": "11.1.2",
+    "eslint-plugin-testing-library": "^4.12.4",
     "identity-obj-proxy": "^3.0.0",
     "jest": "^27.2.1",
     "next-page-tester": "^0.28.0",
