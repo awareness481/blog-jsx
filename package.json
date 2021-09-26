@@ -3,7 +3,7 @@
   "scripts": {
     "cypress": "cypress open",
     "cypress:headless": "cypress run",
-    "cypress:ci": "CYPRESS_API_URL=\"http://95.179.177.71:4000/\" cy2 run --parallel --record --key somekey --ci-build-id hello-cypress",
+    "cypress:ci": "CYPRESS_API_URL=\"http://95.179.177.71:1234/\" cy2 run --parallel --record --key somekey --ci-build-id hello-cypress",
     "e2e": "npm run build && start-server-and-test start http://localhost:3000 cypress",
     "e2e:headless": "npm run build && start-server-and-test start http://localhost:3000 cypress:headless",
     "jest": "jest --watch",
