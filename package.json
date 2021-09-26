@@ -3,6 +3,7 @@
   "scripts": {
     "cypress": "cypress open",
     "cypress:headless": "cypress run",
+    "cypress:ci": "CYPRESS_API_URL=\"http://localhost:1234/\" cy2 run --parallel --record --key somekey --ci-build-id hello-cypress",
     "e2e": "npm run build && start-server-and-test start http://localhost:3000 cypress",
     "e2e:headless": "npm run build && start-server-and-test start http://localhost:3000 cypress:headless",
     "jest": "jest --watch",
@@ -28,6 +29,7 @@
     "@types/lz-string": "^1.3.34",
     "@types/react": "^17.0.22",
     "babel-jest": "^27.2.1",
+    "cy2": "^1.3.0",
     "cypress": "^8.4.1",
     "eslint": "7.32.0",
     "eslint-config-next": "11.1.2",
