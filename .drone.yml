@@ -1,3 +1,7 @@
+workspace:
+  base: /drone
+  path: src
+
 kind: pipeline
 type: docker
 name: default
