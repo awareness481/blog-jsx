@@ -2,37 +2,14 @@ kind: pipeline
 type: docker
 name: default
 
-workspace:
-  path: /drone/src
-
-steps:
-  - name: yaml_validator
-    image: devatherock/drone-yaml-validator:latest
-    settings:
-      debug: false
-      continue_on_error: false
-      allow_duplicate_keys: true
-
 steps:
   - name: frontend
-    image: node:14
+    image: node
     commands:
       - npm install
       - npm run build
       - npm run start:ci
-  - name: update-status-to-github
-    image: codehimanshu/gitdrone:1.7
-    environment:
-      drone_access_token:
-        from_secret: drone_access_token
-      github_installation_id:
-        from_secret: github_installation_id
-      github_app_id: 1718965
-      private_key:
-        from_secret: private_key
-    when:
-      status: [failure, success]
-      event: pull_request
+  
 
 trigger:
   event:
