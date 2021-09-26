@@ -11,7 +11,8 @@
     "dev:watch": "next-remote-watch ./posts",
     "lint": "next lint",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "start:ci": "start-server-and-test start http://localhost:3000 cypress:ci" 
   },
   "dependencies": {
     "cy2": "^1.3.0",

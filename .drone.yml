@@ -11,7 +11,7 @@ steps:
     commands:
       - npm install
       - npm run build
-      - start-server-and-test start http://localhost:3000 cypress:ci
+      - npm run start:ci
   - name: update-status-to-github
     image: codehimanshu/gitdrone:1.7
     environment:
