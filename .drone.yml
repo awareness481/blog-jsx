@@ -4,7 +4,7 @@ name: default
 
 steps:
   - name: frontend
-    image: node14
+    image: node:14
     commands:
       - npm install
       - npm run build
