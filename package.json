@@ -13,6 +13,7 @@
     "start": "next start"
   },
   "dependencies": {
+    "cypress-axe": "^0.13.0",
     "gray-matter": "^4.0.2",
     "next": "latest",
     "next-mdx-remote": "^3.0.1",
