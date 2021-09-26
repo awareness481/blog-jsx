@@ -4,7 +4,7 @@ name: default
 
 steps:
   - name: frontend
-    image: cypress/base:10
+    image: cypress/base
     commands:
       - npm install
       - npm run build
