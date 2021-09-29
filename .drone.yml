@@ -7,7 +7,7 @@ workspace:
 
 steps:
   - name: frontend
-    image: node:14
+    image: cypress:base
     commands:
       - npm install
       - npm run build
