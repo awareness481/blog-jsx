@@ -22,7 +22,6 @@ const components = {
   // useful for conditionally loading components for certain routes.
   // See the notes in README.md for more details.
   TestComponent: dynamic(() => import('../../components/TestComponent')),
-  Head,
 }
 
 export default function PostPage({ source, frontMatter }: {
@@ -37,20 +36,24 @@ export default function PostPage({ source, frontMatter }: {
   }
 }): JSX.Element {
   return (
+    <>
+    <Head>
+      <title>{frontMatter.title}</title>
+    </Head>
     <Layout>
-      <header>
+
         <nav>
           <Link href="/">
             <a>👈 Go back home</a>
           </Link>
         </nav>
-      </header>
-      <div className="post-header">
+
+      <header className="post-header">
         <h1>{frontMatter.title}</h1>
         {frontMatter.description && (
           <p className="description">{frontMatter.description}</p>
         )}
-      </div>
+      </header>
       <main>
         <MDXRemote {...source} components={components} />
       </main>
@@ -68,6 +71,7 @@ export default function PostPage({ source, frontMatter }: {
         }
       `}</style>
     </Layout>
+    </>
   )
 }
 

@@ -6,7 +6,7 @@ describe("Accessibility", () => {
     cy.injectAxe();
     cy.checkA11y();
 
-    cy.visit('/hello-world');
+    cy.visit('/posts/hello-world');
     cy.injectAxe();
     cy.checkA11y();
   });
