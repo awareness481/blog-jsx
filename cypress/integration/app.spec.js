@@ -12,6 +12,7 @@ describe("Accessibility", () => {
     cy.injectAxe();
     cy.screenshot();
     cy.screenshot();
+    cy.screenshot();
     cy.checkA11y();
   });
 });
