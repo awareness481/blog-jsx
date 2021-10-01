@@ -5,7 +5,6 @@ describe("Accessibility", () => {
     cy.visit('/');
     cy.screenshot();
     cy.injectAxe();
-    cy.screenshot();
     cy.checkA11y();
 
     cy.visit('/posts/hello-world');
