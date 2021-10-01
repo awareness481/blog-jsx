@@ -11,6 +11,5 @@ describe("Accessibility", () => {
     cy.visit('/posts/hello-world');
     cy.injectAxe();
     cy.checkA11y();
-    cy.screenshot();
   });
 });
