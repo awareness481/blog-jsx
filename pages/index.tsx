@@ -32,7 +32,11 @@ export default function Index({ posts }: { posts: Posts[] }) {
                   as={`/posts/${post.filePath.replace(/\.mdx?$/, "")}`}
                   href={`/posts/[slug]`}
                 >
-                  <a>{post.data.title}</a>
+                    <a>
+                      <h2>{post.data.title}</h2>
+                      <p>{post.data.description}</p>
+                      Read more
+                    </a>
                 </Link>
               </li>
             ))}
@@ -51,7 +55,7 @@ export function getStaticProps() {
     return {
       content,
       data,
-      filePath,
+      filePath: filePath.replace(".mdx", ""),
     };
   });
 
