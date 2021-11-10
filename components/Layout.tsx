@@ -6,9 +6,7 @@ export default function Layout({ children }: {
       <div className="wrapper">{children}</div>
       <style jsx>{`
         .wrapper {
-          max-width: 36rem;
-          margin: 0 auto;
-          padding: 1.5rem;
+
         }
       `}</style>
       <style jsx global>{`
