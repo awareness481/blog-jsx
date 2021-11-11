@@ -10,7 +10,7 @@ type Posts = {
   content: string;
   data: { [key: string]: any };
   filePath: string;
-};
+}; 
 
 export default function Index({ posts }: { posts: Posts[] }) {
   return (

@@ -1,7 +1,7 @@
 /**
  * @type {import('next/dist/next-server/server/config').NextConfig}
  **/
-
+ 
 module.exports = {
   typescript: {
     // !! WARN !!
@@ -9,5 +9,5 @@ module.exports = {
     // your project has type errors.
     // !! WARN !!
     ignoreBuildErrors: true,
-  },
+  }, 
 };
