@@ -1,0 +1,36 @@
+.nav {
+  width: fit-content;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-evenly;
+}
+.active {
+    --color-stop: red !important;
+}
+
+.nav a {
+  margin: 0 2rem;
+  display: block;
+  color: white;
+  text-decoration: none;
+  text-shadow: 0.5px 0.5px black;
+  font-size: 1.5rem;
+  padding: 0.5rem 1rem;
+  --color-stop: pink;
+  background: linear-gradient(white, var(--color-stop));
+  transition: --color-stop 1s;
+}
+
+
+.nav a:hover {
+    --color-stop: deepskyblue !important;
+    color: white;
+}
+
+@property --color-stop {
+  syntax: "<color>";
+  inherits: false;
+  initial-value: transparent;
+}
+
+

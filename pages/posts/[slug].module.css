@@ -11,14 +11,7 @@
 
 @media only screen and (min-width: 1050px) {
   .main {
-    width: 40vw;
+    width: 35vw;
   }
 }
 
-.title {
-  text-align: center;
-}
-
-.description {
-  text-align: center;
-}
