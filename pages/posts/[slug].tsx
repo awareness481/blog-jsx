@@ -51,15 +51,15 @@ export default function PostPage({
           </Link>
         </nav>
 
-        <header className="post-header">
-          <h1 className={styles.title}>{frontMatter.title}</h1>
-          {frontMatter.description && (
-            <p className={`decription ${styles.description}`}>
-              {frontMatter.description}
-            </p>
-          )}
-        </header>
         <main className={styles.main}>
+          <header className="post-header">
+            <h1 className={styles.title}>{frontMatter.title}</h1>
+            {frontMatter.description && (
+              <p className={`decription ${styles.description}`}>
+                {frontMatter.description}
+              </p>
+            )}
+          </header>
           <MDXRemote {...source} components={components} />
         </main>
 
