@@ -1,17 +1,32 @@
 .main {
   width: 90vw;
   margin: 0 auto;
+  position: relative;
+}
+
+
+
+.main p {
+  color: #141414;
+  line-height: 1.4;
+  font-size: 1.2rem;
 }
 
 @media only screen and (min-width: 720px) {
   .main {
     width: 80vw;
   }
+
+  .main p {
+    line-height: 1.8;
+  }
 }
 
 @media only screen and (min-width: 1050px) {
   .main {
-    width: 35vw;
+    box-sizing: border-box;
+    width: 51vw;
+    padding: 0 7vw;
   }
 }
 
