@@ -34,12 +34,7 @@ export default function Layout({ children }: {
           color: var(--site-color);
           text-decoration-color: currentcolor;
         }
-
-        h1,
-        // p {
-        //   margin-bottom: 1.5rem;
-        // }
-
+        
         code {
           font-family: 'Menlo';
         }
