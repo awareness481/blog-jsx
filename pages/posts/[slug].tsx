@@ -90,7 +90,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
   const mdxSource = await serialize(content, {
     // Optionally pass remark/rehype plugins
     mdxOptions: {
-      remarkPlugins: [[remarkShikiTwoslash, { theme: "github-dark" }]],
+      remarkPlugins: [[remarkShikiTwoslash, { theme: "slack-theme-ochin" }]],
       rehypePlugins: [],
     },
     scope: data,
