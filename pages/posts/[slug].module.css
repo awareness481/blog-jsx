@@ -8,8 +8,8 @@
 
 .main p {
   color: #141414;
-  line-height: 1.4;
-  font-size: 1.2rem;
+  line-height: 2;
+  font-size: 1.3rem;
 }
 
 @media only screen and (min-width: 720px) {
@@ -26,7 +26,15 @@
   .main {
     box-sizing: border-box;
     width: 51vw;
-    padding: 0 7vw;
+    padding: 0 5vw;
+  }
+
+  .main p {
+    padding: 0 2vw;
+  }
+
+  .main h1, .main h2, .main h3, .main h4, .main h5, .main h6 {
+    padding: 0 2vw;
   }
 }
 
