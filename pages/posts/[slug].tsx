@@ -9,37 +9,20 @@ import path from "path";
 import CustomLink from "@/components/CustomLink";
 import Layout from "@/components/Layout";
 import { postFilePaths, POSTS_PATH } from "../../utils/mdxUtils";
-import { GetStaticPaths, GetStaticProps } from "next";
+import { GetStaticPaths, GetStaticProps, InferGetStaticPropsType } from "next";
 import remarkShikiTwoslash from "remark-shiki-twoslash";
 import styles from "./[slug].module.css";
 
-// Custom components/renderers to pass to MDX.
-// Since the MDX files aren't loaded by webpack, they have no knowledge of how
-// to handle import statements. Instead, you must include components in scope
-// here.
 const components = {
   a: CustomLink,
-  // It also works with dynamically-imported components, which is especially
-  // useful for conditionally loading components for certain routes.
-  // See the notes in README.md for more details.
   TestComponent: dynamic(() => import("../../components/TestComponent")),
-  Image: dynamic(() => import("next/image"))
+  Image: dynamic(() => import("next/image")),
 };
 
 export default function PostPage({
   source,
   frontMatter,
-}: {
-  source: {
-    compiledSource: string;
-    scope?: Record<string, unknown>;
-    lazy?: boolean;
-  };
-  frontMatter: {
-    title: string;
-    description: string;
-  };
-}): JSX.Element {
+}: InferGetStaticPropsType<typeof getStaticProps>): JSX.Element {
   return (
     <>
       <Head>
@@ -90,7 +73,9 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
   const mdxSource = await serialize(content, {
     // Optionally pass remark/rehype plugins
     mdxOptions: {
-      remarkPlugins: [[remarkShikiTwoslash, { theme: "../../../../../themes/light-plus" }]],
+      remarkPlugins: [
+        [remarkShikiTwoslash, { theme: "../../../themes/light-plus" }],
+      ],
       rehypePlugins: [],
     },
     scope: data,
