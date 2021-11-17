@@ -12,11 +12,23 @@ import { postFilePaths, POSTS_PATH } from "../../utils/mdxUtils";
 import { GetStaticPaths, GetStaticProps, InferGetStaticPropsType } from "next";
 import remarkShikiTwoslash from "remark-shiki-twoslash";
 import styles from "./[slug].module.css";
+import { ImageProps } from "next/image";
+
+const Image = dynamic(() => import("next/image"));
+type NextImageProps = ImageProps & { expanded?: boolean };
+
+const NextImage = (props: NextImageProps) => (
+  <div className={props?.expanded ? styles.img : ""}>
+    {/* Alt will be provided in the mdx post */
+    /* eslint-disable-next-line jsx-a11y/alt-text */}
+    <Image {...props} />
+  </div>
+);
 
 const components = {
   a: CustomLink,
   TestComponent: dynamic(() => import("../../components/TestComponent")),
-  Image: dynamic(() => import("next/image")),
+  Image: NextImage,
 };
 
 export default function PostPage({

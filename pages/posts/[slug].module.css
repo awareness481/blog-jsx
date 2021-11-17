@@ -26,15 +26,19 @@
   .main {
     box-sizing: border-box;
     width: 51vw;
-    padding: 0 5vw;
+    padding: 0 7vw;
   }
-
+/* 
   .main p {
     padding: 0 2vw;
   }
 
   .main h1, .main h2, .main h3, .main h4, .main h5, .main h6 {
     padding: 0 2vw;
-  }
+  } */
+}
+
+.img {
+  margin: 0 -50px !important;
 }
 
