@@ -6,7 +6,7 @@ The example also showcases [next-remote-watch](https://github.com/hashicorp/next
 
 Since `next-remote-watch` uses undocumented Next.js APIs, it doesn't replace the default `dev` script for this example. To use it, run `npm run dev:watch` or `yarn dev:watch`.
 
-## Deploy your own
+## Deploy your own 
 
 Deploy the example using [Vercel](https://vercel.com?utm_source=github&utm_medium=readme&utm_campaign=next-example):
 
