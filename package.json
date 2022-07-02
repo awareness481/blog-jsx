@@ -1,5 +1,5 @@
 {
-  "private": true,
+  "private": true, 
   "scripts": {
     "cypress": "cypress open",
     "cypress:headless": "cypress run",
