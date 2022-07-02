@@ -6,7 +6,7 @@
       "@/components/*": ["components/*"]
     },
     "lib": [
-      "dom",
+      "dom", 
       "dom.iterable",
       "esnext"
     ],
